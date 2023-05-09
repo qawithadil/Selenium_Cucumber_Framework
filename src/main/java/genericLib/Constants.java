@@ -16,5 +16,6 @@ public interface Constants {
 	static String screenshot_file=System.getProperty("user.dir")+"\\src\\test\\resources\\screenshots\\";
 	static String userName = "Test1";
 	static String password = "12345";
+	 String abc="122";
 
 }
