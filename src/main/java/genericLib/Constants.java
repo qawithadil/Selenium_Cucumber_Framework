@@ -5,7 +5,7 @@ import java.io.File;
 public interface Constants {
 
 	String baseURL = "https://example.testproject.io/web/";
-	String browser = "chrome";
+	String browser = "edge";
 	int globalWait = 20;
 	String chrome_path = System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe";
 	String firefox_path = System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\geckodriver.exe";
