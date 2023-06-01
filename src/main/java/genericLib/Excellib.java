@@ -75,6 +75,24 @@ public class Excellib {
 		fos.close();
 
 	}
+	
+	public static void getSignleColumnDataLatest(String sheetName, int colNum) throws IOException {
+
+		FileInputStream fis = new FileInputStream(Constants.file_path);
+		XSSFWorkbook workbook = new XSSFWorkbook(fis);
+		XSSFSheet sheet = workbook.getSheet(sheetName);
+		int row_num = sheet.getLastRowNum();
+		System.out.println("Total Number of Rows =" + row_num);
+		for (int i = 1; i <= row_num; i++) {
+			XSSFRow row = sheet.getRow(i);
+			String data = row.getCell(colNum).toString();
+			System.out.println("Data=" + data);
+			fis.close();
+			workbook.close();
+
+		}
+
+	}
 
 	public static Object[][] getLoginCreds(File fileName, String sheetName) throws IOException {
 
@@ -109,5 +127,6 @@ public class Excellib {
 		workbook.close();
 		return credsArray;
 	}
+	
 
 }
